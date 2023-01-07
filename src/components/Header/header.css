@@ -3,22 +3,16 @@
   box-shadow: 0 var(--size-xsm) var(--size-xxl) 0 var(--opacity-dark-main);
 }
 
-.header-container {
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: var(--size-xxl);
 }
 
-.header-container img {
-  max-height: 30px;
-  filter: 
-    invert(92%) 
-    sepia(68%) 
-    saturate(4679%) 
-    hue-rotate(310deg) 
-    brightness(108%) 
-    contrast(101%);
+.header .container img {
+  max-height: var(--size-huge);
+  filter: var(--logo-filter);
 }
 
 .header-social-container {
@@ -56,4 +50,10 @@
 .header-social-icon:hover svg {
   width: var(--size-xxl);
   height: var(--size-xxl);
+}
+
+@media screen and (max-width: 600px) {
+  .header-social-container {
+    column-gap: var(--size-lg);
+  }
 }

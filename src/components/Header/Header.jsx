@@ -6,8 +6,8 @@ import logo from '../../assets/logo.png'
 export const Header = () => {
   return (
     <header className='header'>
-      <div className='container'>
-      <div className='header-container'>
+      <div className='container section'>
+      {/*<div className='header-container'>*/}
         <img src={logo} alt="Logo" />
         <div className='header-social-container'>
           <a 
@@ -25,7 +25,7 @@ export const Header = () => {
             <FaGithub />
           </a>
         </div>
-      </div>
+      {/*</div>*/}
       </div>
     </header>
   )
