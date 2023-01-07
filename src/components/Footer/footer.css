@@ -45,17 +45,3 @@ footer .container {
 .pokeapi a:hover {
   text-decoration: underline;
 }
-
-@media screen and (max-width: 500px) {
-  footer .container {
-    justify-content: center;
-    flex-direction: column;
-    row-gap: var(--size-lg);
-    
-  }
-
-  footer .footer-right .rights,
-  footer .footer-right .pokeapi {
-    text-align: center;
-  }
-}

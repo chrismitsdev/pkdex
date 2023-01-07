@@ -1,6 +1,5 @@
 export {App} from './App'
 export {Header} from './Header'
-export {Spotlight} from './Spotlight'
 export {Box} from './Box'
 export {Footer} from './Footer'
 export {Pokemon} from './Pokemon'

@@ -31,16 +31,3 @@
   0%    {transform: rotate(0deg)}
   100%  {transform: rotate(360deg)}
 }
-
-@media screen and (max-width: 600px) {
-  .spinner-container {
-    align-items: flex-start;
-  }
-
-  .spinner {
-    width: 64px;
-    height: 64px;
-    border-width: var(--size-sm);
-    margin-top: 50px;
-  }
-}

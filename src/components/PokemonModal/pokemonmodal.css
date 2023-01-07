@@ -22,7 +22,7 @@
   top: 35%;
   left: 50%;
   display: flex;
-  column-gap: calc(var(--size-huge) * 2);
+  gap: calc(var(--size-huge) * 2);
   flex-wrap: wrap;
   padding: var(--size-huge);
   border-radius: var(--size-md);
@@ -36,23 +36,6 @@
   animation: slide 450ms cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-@keyframes slide {
-  0% {
-    transform: translate(-50%, -1000px) scaleY(3.5) scaleX(0.5);
-    transform-origin: 50% 0%;
-    filter: blur(40px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scaleY(1) scaleX(1);
-    transform-origin: 50% 50%;
-    filter: blur(0);
-    opacity: 1;
-  }
-}
-
-/* Pokemon Modal Left Side */
 .pokemon-modal-left {
   display: flex;
   flex-direction: column;
@@ -112,7 +95,6 @@
   border-radius: var(--size-md);
 }
 
-/* Pokemon Modal Right Side */
 .pokemon-modal-right {
   display: flex;
   flex-direction: column;
@@ -180,8 +162,7 @@
 }
 
 .pokemon-modal-progress-bar-container {
-  max-width: 255px;
-  width: 100%;
+  width: 255px;
   height: var(--size-md);
   border-radius: var(--size-sm);
   background-color: var(--opacity-light-main);
@@ -199,15 +180,31 @@
   animation: gain 1500ms ease 0s 1 normal forwards running;
 }
 
-@keyframes gain {
-  100% {
-    transform: initial
-  }
-}
-
 .pokemon-modal-content .pokemon-modal-close-btn {
   position: absolute;
   top: var(--size-md);
   right: var(--size-lg);
   border-radius: 50%;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(-50%, -1000px) scaleY(3.5) scaleX(0.5);
+    transform-origin: 50% 0%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gain {
+  100% {
+    transform: initial
+  }
 }

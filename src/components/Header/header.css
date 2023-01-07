@@ -51,9 +51,3 @@
   width: var(--size-xxl);
   height: var(--size-xxl);
 }
-
-@media screen and (max-width: 600px) {
-  .header-social-container {
-    column-gap: var(--size-lg);
-  }
-}

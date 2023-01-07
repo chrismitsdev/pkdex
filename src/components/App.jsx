@@ -1,19 +1,26 @@
 import React from 'react'
 import Modal from 'react-modal'
+import {ToastContainer} from 'react-toastify'
 import {PokemonProvider} from '../context'
-import {Header, Spotlight, Box, Footer, PokemonModal} from './'
+import {Header, Box, Footer} from './'
 
+import 'react-toastify/dist/ReactToastify.min.css'
 Modal.setAppElement('#root')
 
 export const App = () => {
   return (
-    <React.StrictMode>
+    <React.Fragment>
       <PokemonProvider>
         <Header />
-        {/*<Spotlight />*/}
         <Box />
         <Footer />
+        <ToastContainer 
+          position='top-right' 
+          autoClose={3500} 
+          newestOnTop 
+          theme='dark'
+        />
       </PokemonProvider>
-    </React.StrictMode>
+    </React.Fragment>
   )
 }
