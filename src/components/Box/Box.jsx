@@ -12,7 +12,8 @@ import './box.css'
 export const Box = () => {
   const {
     data, 
-    isPending, 
+    isPending,
+    windowSize, 
     endpoint, 
     offset, 
     setEndpoint, 
@@ -20,6 +21,7 @@ export const Box = () => {
   } = React.useContext(PokemonContext)
   const searchInput = React.useRef(null)
   const pokemonIsArray = Array.isArray(data.pokemon)
+  const calcSlides = windowSize.width > 600 ? 3 : 1
 
   const handleOffset = (e) => {
     const prev = e.currentTarget.id === 'prev'
@@ -60,10 +62,20 @@ export const Box = () => {
   }
 
   return (
-    <div className='container section'>
+    <main className='container section'>
       <div className='box-controls'>
         <nav className='box-home'>
           <IconContext.Provider value={{size: 16}}>
+            <Button
+              className='home-btn'
+              disabled={isPending || (pokemonIsArray && !endpoint)} 
+              onClick={handleHome}
+            >
+              <FaHome />
+              {windowSize.width > 600 && (
+                <span className='box-home-text'>Home</span>
+              )}
+            </Button>
             <Button 
               id='prev' 
               className='prev-btn'
@@ -71,14 +83,6 @@ export const Box = () => {
               onClick={handleOffset}
             >
               <FaAngleLeft />
-            </Button>
-            <Button
-              className='home-btn'
-              disabled={isPending || (pokemonIsArray && !endpoint)} 
-              onClick={handleHome}
-            >
-              <FaHome />
-              <span className='box-home-text'>Home</span>
             </Button>
             <Button 
               id='next' 
@@ -92,12 +96,12 @@ export const Box = () => {
         </nav>
 
         <CarouselProvider 
-          naturalSlideWidth={200} 
-          naturalSlideHeight={80} 
+          naturalSlideWidth={100} 
+          naturalSlideHeight={40} 
           totalSlides={data.types?.length - 2}
-          step={3}
+          step={calcSlides}
           dragEnabled={false}
-          visibleSlides={3}
+          visibleSlides={calcSlides}
         >
           <IconContext.Provider value={{size: 20}}>
             <ButtonBack className='carousel-btn'><FaAngleLeft /></ButtonBack>
@@ -134,6 +138,6 @@ export const Box = () => {
             : data.pokemon && <Pokemon pkmn={data.pokemon} />
         )}
       </div>
-    </div>
+    </main>
   )
 }

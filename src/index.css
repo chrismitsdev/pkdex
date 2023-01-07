@@ -30,7 +30,9 @@
 }
 
 /* Reset - Base - Utils */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -41,21 +43,27 @@ html {
   font-weight: 400;
   background-color: var(--sec-color);
   user-select: none;
-  overflow: overlay;
 }
 
-input {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+html::-webkit-scrollbar {
+  display: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .section {
   padding-block: var(--size-huge);
+  padding-inline: var(--size-xxl);
 }
 
 /* Type Colors */

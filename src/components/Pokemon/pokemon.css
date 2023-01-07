@@ -1,7 +1,7 @@
 .pokemon {
   position: relative;
   cursor: pointer;
-  width: 380px;
+  width: 366px;
   height: 200px;
   display: flex;
   justify-content: space-between;

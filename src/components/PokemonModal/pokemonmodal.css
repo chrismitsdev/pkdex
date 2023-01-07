@@ -1,7 +1,3 @@
-.pokemon-modal-active {
-  overflow: hidden;
-}
-
 .pokemon-modal-overlay {
   position: fixed;
   width: 100%;
@@ -11,11 +7,15 @@
   opacity: 0;
   background-color: var(--opacity-dark-alt);
   transition: opacity 450ms ease-in-out;
-  /*overflow-y: scroll; */ /* To keep showing scrollbar */
 }
-.ReactModal__Overlay--after-open {opacity: 1}
-.ReactModal__Overlay--before-close {opacity: 0}
 
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
 
 .pokemon-modal-content {
   position: absolute;

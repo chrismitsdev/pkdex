@@ -1,8 +1,7 @@
 /* Shared styles */
 .box-home,
-.carousel,
 .box-form {
-  max-width: 380px;
+  max-width: 366px;
   width: 100%;
   display: flex;
 }
@@ -15,6 +14,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 2px solid var(--main-color);
+  row-gap: var(--size-lg);
 }
 
 .box-home {
@@ -25,16 +25,27 @@
   font-size: 14px;
 }
 
-.carousel-slider {
-  width: 300px;
+.carousel {
+  max-width: 366px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
 }
 
+.carousel-slider {
+  width: 100%;
+}
+  
 .carousel-btn {
   appearance: none;
   background: none;
   border: none;
-
-  width: 40px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(var(--size-lg) - 2px);
   color: var(--alt-color);
   border-radius: var(--size-sm);
   transition: background-color var(--short-transition-duration);
@@ -59,7 +70,7 @@
 
 .carousel-slide-content {
   user-select: none;
-  max-width: 90px;
+  max-width: 85px;
   width: 100%;
   color: var(--main-color);
   letter-spacing: .5px;
@@ -76,7 +87,7 @@
 
 .carousel-slide-content:hover {
   color: var(--alt-color);
-  box-shadow: inset 0 0 100px 100px var(--opacity-dark-alt);
+  box-shadow: inset 0 0 var(--size-huge) var(--size-huge) var(--opacity-dark-alt);
 }
 
 .carousel__slide-focus-ring {
@@ -88,7 +99,6 @@
   transition: box-shadow var(--short-transition-duration);
 }
 
-/*.box-form:hover,*/
 .box-form:focus-within {
   box-shadow: 0 0 var(--size-sm) var(--size-xsm) var(--opacity-dark-main);
 }
@@ -97,6 +107,8 @@
   outline: none;
   border: none;
   background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 
   width: -moz-available;
   width: -webkit-fill-available;
@@ -138,4 +150,88 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: var(--size-huge);
+}
+
+
+@media screen and (max-width: 1138px) {
+  .box-home {
+    width: unset;
+    order: 2;
+  }
+
+  .carousel {
+    order: 3;
+  }
+
+  .box-form {
+    max-width: unset;
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box-home {
+    width: unset;
+    order: 2;
+    column-gap: var(--size-md);
+  }
+
+  .carousel {
+    max-width: 180px;
+  }
+
+  .box-pokemon {
+    row-gap: var(--size-xl);
+  }
+
+  .box-pokemon .pokemon {
+    padding: 14px;
+    height: fit-content;
+    justify-content: unset;
+    column-gap: var(--size-xxl);
+    border-radius: var(--size-sm);
+  }
+
+  .box-pokemon .pokemon .pokemon-info {
+    order: 2;
+    row-gap: var(--size-md);
+  }
+
+  .box-pokemon .pokemon .pokemon-number {
+    font-size: calc(var(--size-md) + 2px);
+  }
+
+  .box-pokemon .pokemon .pokemon-name {
+    margin-bottom: unset;
+    font-size: 14px;
+    max-height: 20px;
+    /*font-weight: 800;*/
+  }
+
+  .box-pokemon .pokemon .pokemon-image {
+    width: 70px;
+    height: 70px;
+    order: 1;
+    align-self: center;
+  }
+
+  .box-pokemon .pokemon .pokemon-types,
+  .box-pokemon .pokemon .pokemon-dimensions {
+    flex-direction: row;
+    column-gap: var(--size-md);
+  }
+
+  .box-pokemon .pokemon .pokemon-dimensions {
+    margin-top: unset;
+  }
+
+  .box-pokemon .pokemon .pokemon-types .pokemon-type {
+    padding-inline: var(--size-lg);
+    text-align: center;
+  }
+
+  .box-pokemon .pokemon .pokemon-dimensions .pokemon-dimension {
+    column-gap: var(--size-md);
+    align-items: center;
+  }
 }
