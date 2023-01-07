@@ -181,14 +181,20 @@
   }
 
   .box-pokemon {
-    row-gap: var(--size-xl);
+    min-height: 1364px;
+  }
+
+  .box-controls,
+  .box-pokemon {
+    row-gap: var(--size-lg);
+    padding-block: var(--size-xl)
   }
 
   .box-pokemon .pokemon {
     padding: 14px;
     height: fit-content;
     justify-content: unset;
-    column-gap: var(--size-xxl);
+    column-gap: var(--size-xl);
     border-radius: var(--size-sm);
   }
 
@@ -205,7 +211,6 @@
     margin-bottom: unset;
     font-size: 14px;
     max-height: 20px;
-    /*font-weight: 800;*/
   }
 
   .box-pokemon .pokemon .pokemon-image {
@@ -227,7 +232,8 @@
 
   .box-pokemon .pokemon .pokemon-types .pokemon-type {
     padding-inline: var(--size-lg);
-    text-align: center;
+    font-size: var(--size-lg);
+    border-radius: var(--size-sm);
   }
 
   .box-pokemon .pokemon .pokemon-dimensions .pokemon-dimension {

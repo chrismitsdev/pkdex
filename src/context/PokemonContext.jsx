@@ -14,9 +14,9 @@ export const PokemonProvider = ({children}) => {
     <PokemonContext.Provider value={{
       data,
       isPending,
-      windowSize,
       endpoint,
       offset,
+      windowSize,
       setEndpoint,
       setOffset
     }}>
