@@ -1,0 +1,76 @@
+import {createGlobalStyle} from 'styled-components'
+
+export const GlobalStyles = createGlobalStyle`
+  :root {
+    --main-color: #222831;
+    --sec-color: #393E46;
+    --alt-color: #eeeeee;
+    --accent-color: #ffd369;
+
+    --opacity-dark-main: rgba(0, 0, 0, 0.25);
+    --opacity-dark-alt: rgba(0, 0, 0, 0.55);
+    --opacity-light-main: rgba(255, 255, 255, 0.25);
+    --opacity-light-alt: rgba(255, 255, 255, 0.55);
+
+    --size-xsm: 2px;
+    --size-sm: 4px;
+    --size-md: 8px;
+    --size-lg: 12px;
+    --size-xl: 16px;
+    --size-xxl: 20px;
+    --size-huge: 30px;
+
+    --short-transition-duration: 150ms ease-out;
+    --long-transition-duration: 450ms ease-in-out;
+
+    --logo-filter: 
+      invert(92%) 
+      sepia(68%) 
+      saturate(4679%) 
+      hue-rotate(310deg) 
+      brightness(108%) 
+      contrast(101%);
+  }
+
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: var(--sec-color);
+    user-select: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .normal   {background-color: #A8A77A}
+  .fire     {background-color: #EE8130}
+  .water    {background-color: #6390F0}
+  .electric {background-color: #F7D02C}
+  .grass    {background-color: #7AC74C}
+  .ice      {background-color: #96D9D6}
+  .fighting {background-color: #C22E28}
+  .poison   {background-color: #A33EA1}
+  .ground   {background-color: #E2BF65}
+  .flying   {background-color: #A98FF3}
+  .psychic  {background-color: #F95587}
+  .bug      {background-color: #A6B91A}
+  .rock     {background-color: #B6A136}
+  .ghost    {background-color: #735797}
+  .dragon   {background-color: #6F35FC}
+  .dark     {background-color: #705746}
+  .steel    {background-color: #B7B7CE}
+  .fairy    {background-color: #D685AD}
+`

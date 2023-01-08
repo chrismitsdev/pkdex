@@ -1,5 +1,7 @@
 export {App} from './App'
+export {Container} from './Container'
 export {Header} from './Header'
+export {Main} from './Main'
 export {Box} from './Box'
 export {Footer} from './Footer'
 export {Pokemon} from './Pokemon'

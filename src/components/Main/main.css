@@ -1,10 +1,3 @@
-.box-home,
-.box-form {
-  max-width: 366px;
-  width: 100%;
-  display: flex;
-}
-
 .box-controls {
   display: flex;
   padding-block: var(--size-xxl);
@@ -13,6 +6,13 @@
   justify-content: space-between;
   border-bottom: 2px solid var(--main-color);
   row-gap: var(--size-lg);
+}
+
+.box-home,
+.box-form {
+  max-width: 366px;
+  width: 100%;
+  display: flex;
 }
 
 .box-home {
@@ -137,15 +137,4 @@
 
 .main-button.box-form-btn:hover {
   background-color: var(--main-color);
-}
-
-.box-pokemon {
-  width: 100%;
-  min-height: 930px;
-  padding-block: var(--size-xxl);
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--size-huge);
 }

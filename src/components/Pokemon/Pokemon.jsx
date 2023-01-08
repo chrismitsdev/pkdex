@@ -7,10 +7,7 @@ import './pokemon.css'
 
 export const Pokemon = ({pkmn}) => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false)
-  const handleOpenModal = () => {
-    console.log(pkmn)
-    setModalIsOpen(true)
-  }
+  const handleOpenModal = () => setModalIsOpen(true)
   const handleCloseModal = () => setModalIsOpen(false)
 
   return (

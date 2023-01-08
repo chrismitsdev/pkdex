@@ -1,8 +1,9 @@
 import React from 'react'
+import {GlobalStyles} from './styles/Global'
 import Modal from 'react-modal'
 import {ToastContainer} from 'react-toastify'
 import {PokemonProvider} from '../context'
-import {Header, Box, Footer} from './'
+import {Header, Main, Footer} from './'
 
 import 'react-toastify/dist/ReactToastify.min.css'
 Modal.setAppElement('#root')
@@ -11,8 +12,9 @@ export const App = () => {
   return (
     <React.Fragment>
       <PokemonProvider>
+        <GlobalStyles />
         <Header />
-        <Box />
+        <Main />
         <Footer />
         <ToastContainer 
           position='top-right' 

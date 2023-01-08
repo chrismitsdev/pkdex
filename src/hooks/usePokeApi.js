@@ -1,6 +1,6 @@
 import React from 'react'
 import {toast} from 'react-toastify'
-import {paginate} from '../services/paginate'
+import {usePaginate} from './usePaginate'
 
 export const usePokeApi = (endpoint, offset, showing = 12) => {
   const [isPending, setIsPending] = React.useState(false)
@@ -38,7 +38,7 @@ export const usePokeApi = (endpoint, offset, showing = 12) => {
           }
 
           if (endpoint.includes('type')) {
-            const {array} = paginate(json.pokemon, offset + 1, showing)
+            const {array} = usePaginate(json.pokemon, offset + 1, showing)
 
             for (const {pokemon} of array) {
               response = await fetch(pokemon.url)
